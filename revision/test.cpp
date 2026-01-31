@@ -1,23 +1,19 @@
-/* Date : 31.01.26 */
-/* linear search */
-
+/*Kadane's algorithm */
+/* Date : 31.01.26*/
 #include <iostream>
-using namespace std;
-
-int linearSearch(int arr[], int size, int target){
-    for (int i = 0; i < size ; i++){
-        if (arr[i] == target){
-            return i;
+using namespace std; 
+int main(){
+    int size = 4;
+    int arr[size] = {2,2,6,70};
+    int currentSum = 0;
+    int maxSum = INT16_MIN;
+    for (int i = 0; i<size ; i++){
+        currentSum +=arr[i];
+        maxSum = max(currentSum, maxSum);
+        if (currentSum < 0){
+            currentSum  = 0;
         }
     }
-    return -1;
-}
-
-int main(){
-    int size = 8;
-    int arr[8] = {1,4,5,89,432,76,432,90};
-    int target = 76;
-    int result = linearSearch(arr, size, target);
-    cout<< "element "<< target <<"found at " << result<<endl;
+    cout<< "Max sum of subarray is : "<<maxSum << endl;
     return 0;
 }
