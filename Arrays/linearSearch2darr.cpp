@@ -27,18 +27,31 @@ int maxRowSum(int mat[][3], int rows, int colms) {
     return maxSum;
 }
 
+int diagonalSum(int mat[][4], int n){
+  int sum = 0;
+  for (int i = 0; i<n; i++){
+    sum+=mat[i][i];
+    if(i!= n-i-1){
+   sum+= mat[i][n-i-1];
+    }
+  }
+  return sum;
+}
+
 int main() {
-    int mat[4][3] = {
-        {1,2,3},
-        {4,5,6},
-        {7,8,9},
-        {10,11,12}
+    int mat[4][4] = {
+        {1,2,3,0},
+        {4,5,6,0},
+        {7,8,9,0},
+        {10,11,12,0}
     };
+
+    int n= 4;
 
     int rows = 4;
     int colms = 3;
     int key = 8;
-    cout << maxRowSum(mat, rows, colms);
+    cout<<diagonalSum(mat, n);
 
     return 0;
 }
