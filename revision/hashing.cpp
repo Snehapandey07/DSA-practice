@@ -1,5 +1,7 @@
 /* Date : 17.02.26 */
-/* Hashing */
+/* numbers array Hashing */
+
+/*
 #include <iostream>
 using namespace std;
 
@@ -27,7 +29,7 @@ int main() {
 
     while (q--) {
         int number;
-        cin >> number;   // ✅ semicolon fixed
+        cin >> number;   
 
         // Check bounds to avoid crash
         if (number >= 0 && number < 100)
@@ -38,3 +40,43 @@ int main() {
 
     return 0;
 }
+
+*/
+
+/* Date :18.02.26 - Character Hashing */
+#include <iostream>
+using namespace std;
+
+int main() {
+    string s;
+    cout << "Enter string: ";
+    cin >> s;
+
+    int hash[26] = {0};
+
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] >= 'a' && s[i] <= 'z') {
+            hash[s[i] - 'a']++;
+        }
+    }
+
+    int q;
+    cout << "Enter number of queries: ";
+    cin >> q;
+
+    while (q--) {
+        char c;
+        cout << "Enter character: ";
+        cin >> c;
+
+        if (c >= 'a' && c <= 'z') {
+            cout << "Frequency of " << c << " = " 
+                 << hash[c - 'a'] << endl;
+        } else {
+            cout << "Invalid character (only lowercase allowed)" << endl;
+        }
+    }
+
+    return 0;
+}
+
