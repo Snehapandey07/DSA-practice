@@ -44,39 +44,39 @@ int main() {
 */
 
 /* Date :18.02.26 - Character Hashing */
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    string s;
-    cout << "Enter string: ";
-    cin >> s;
+// int main() {
+//     string s;
+//     cout << "Enter string: ";
+//     cin >> s;
 
-    int hash[26] = {0};
+//     int hash[26] = {0};
 
-    for (int i = 0; i < s.size(); i++) {
-        if (s[i] >= 'a' && s[i] <= 'z') {
-            hash[s[i] - 'a']++;
-        }
-    }
+//     for (int i = 0; i < s.size(); i++) {
+//         if (s[i] >= 'a' && s[i] <= 'z') {
+//             hash[s[i] - 'a']++;
+//         }
+//     }
 
-    int q;
-    cout << "Enter number of queries: ";
-    cin >> q;
+//     int q;
+//     cout << "Enter number of queries: ";
+//     cin >> q;
+// z
+//     while (q--) {
+//         char c;
+//         cout << "Enter character: ";
+//         cin >> c;
 
-    while (q--) {
-        char c;
-        cout << "Enter character: ";
-        cin >> c;
+//         if (c >= 'a' && c <= 'z') {
+//             cout << "Frequency of " << c << " = " 
+//                  << hash[c - 'a'] << endl;
+//         } else {
+//             cout << "Invalid character (only lowercase allowed)" << endl;
+//         }
+//     }
 
-        if (c >= 'a' && c <= 'z') {
-            cout << "Frequency of " << c << " = " 
-                 << hash[c - 'a'] << endl;
-        } else {
-            cout << "Invalid character (only lowercase allowed)" << endl;
-        }
-    }
-
-    return 0;
-}
+//     return 0;
+// }
 
