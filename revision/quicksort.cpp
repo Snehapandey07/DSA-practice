@@ -28,6 +28,7 @@ void quicksort(int arr[], int start, int end) {
 int main() {
     int arr[] = {38, 27, 43, 3, 9, 82, 10};
     int n = 7;
+    cout << "\a";
 
     quicksort(arr, 0, n - 1);
 
