@@ -59,5 +59,6 @@ cout<<"---------------------------"<<endl;
 cout<<"Star Pyramid pattern"<<endl;
 starPyramid( s, row, column, n);
 cout<<"---------------------------"<<endl;
+
 return 0;
 }
