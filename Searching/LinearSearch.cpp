@@ -1,7 +1,7 @@
 /*Linear search algoeithm : searching and printing index value */
 /*Date : 22.01.260*/
-
-#include <iostream>
+/*
+ #include <iostream>
 using namespace std;
 int linearSearch(int arr[], int size, int target){
     for (int i = 0; i < size; i++){
@@ -26,4 +26,31 @@ cout<< "Enter the value you want to search : ";
 cin>> target;
 cout<<linearSearch(arr, size, target) << endl;
 return 0;
+}
+*/
+#include <stdio.h>
+
+int linearSearch(int arr[], int size, int target){
+    for(int i = 0; i < size; i++){
+        if(arr[i] == target){
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main(){
+
+    int arr[] = {10, 20, 30, 40, 50};   // predefined array
+    int size = 5;
+    int target = 30;                    // value to search
+
+    int result = linearSearch(arr, size, target);
+
+    if(result != -1)
+        printf("Element found at index: %d\n", result);
+    else
+        printf("Element not found\n");
+
+    return 0;
 }
