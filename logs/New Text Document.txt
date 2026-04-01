@@ -1,0 +1,2 @@
+//01.04.26
+leanrned aestriod collision and understand the probkem , dry run the peroblem 
