@@ -5,7 +5,7 @@ int main(){
     int n = 6;
     int arr [6] = {1,3,6,8,4,2};
 
-    int maxSum = INT32_MIN;
+    int maxSum = INT32_MIN; //Start from smallest possible value
 
     for (int start = 0 ; start < n; start++){
         int current_sum = 0;

@@ -8,7 +8,7 @@ class Q{
     int size = 10, q[10], end = -1, start = -1, currentSz = 0;
 
     public: 
-
+  
     void push(int x){
      if (currentSz == size) return;
      if (currentSz == 0){
