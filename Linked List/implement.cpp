@@ -1,5 +1,6 @@
 /* Date : 05.04.26 */
 /* Implementation  of Linked list : using dynamic memoer pointer */
+
 #include <bits/stdc++.h>
 using namespace std;
 class Node {
