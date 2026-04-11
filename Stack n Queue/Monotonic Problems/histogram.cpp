@@ -1,4 +1,15 @@
-/* Problem statement : 
-Given an array of integers heights representing the histogram's bar height 
-where the width of each bar is 1 return the area of the largest rectangle 
-in the histogram. */
+/* Date : 11.04.26 */
+/* To find maximum reactangls area */
+
+#include <bits/stdc++.h>
+using namespace std ;
+
+class solutiom{
+    public:
+     <int> st;
+
+
+};
+int main(){
+
+}
