@@ -1,2 +1,11 @@
 #mistake 
 1. please check and write variable names on coding platform 
+
+2. mistake in bnary search : I used for loop instead of while and that is not acceptable 
+You should not return unless you find the target
+You should update start or end, not mid directly
+
+🌟Binary search works like:
+If nums[mid] == target → found
+If nums[mid] < target → search right half
+If nums[mid] > target → search left half
