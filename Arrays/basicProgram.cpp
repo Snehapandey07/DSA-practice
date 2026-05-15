@@ -6,6 +6,7 @@
 #include <iostream>
 using namespace std;
 
+
 int main() {
     int sizeofarr = 5;
     int price[sizeofarr];
