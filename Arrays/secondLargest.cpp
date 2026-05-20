@@ -9,9 +9,10 @@ public:
 
         for (int i = 0; i < nums.size(); i++) {
 
-          if (nums[i] > l){
-            mx = nums[i];
-          }
+          if (nums[i] > l) {
+                sl = l;
+                l = nums[i];
+            }
             else if (nums[i] > sl && nums[i] != l) {
                 sl = nums[i];
             }
