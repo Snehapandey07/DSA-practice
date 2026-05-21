@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
 
@@ -76,3 +78,21 @@ public:
         return ans;
     }
 };
+int main(){
+
+    string st = "barfoothefoobarman";
+
+    vector<string> words = {"foo","bar"};
+
+    Solution s;
+
+    vector<int> ans = s.findSubstring(st, words);
+
+    cout << "Substring starting indices: ";
+
+    for (int x : ans) {
+        cout << x << " ";
+    }
+
+    return 0;
+}
