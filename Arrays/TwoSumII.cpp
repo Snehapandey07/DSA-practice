@@ -41,4 +41,41 @@ int main() {
 
     return 0;
 }
-// this leetcode problem uses 1 nased indexing 
+
+
+
+/* Similar problem : two sum pointer  */
+/* . Max Number of K-Sum Pairs  */
+/*
+class Solution {
+public:
+    int maxOperations(vector<int>& nums, int k) {
+        
+        sort(nums.begin(), nums.end());
+
+        int l = 0;
+        int r = nums.size() - 1;
+        int count = 0;
+
+        while (l < r) {
+
+            int sum = nums[l] + nums[r];
+
+            if (sum == k) {
+                count++;
+                l++;
+                r--;
+            }
+            else if (sum < k) {
+                l++;
+            }
+            else {
+                r--;
+            }
+        }
+
+        return count;
+    }
+};
+*/
+
