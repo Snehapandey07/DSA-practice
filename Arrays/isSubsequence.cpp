@@ -1,4 +1,5 @@
 /* Date : 25th may 2026 */
+/* Two pointers  */
 /* core idea : j scans the whole big string t
 i moves only when a matching character is found in s */
 
