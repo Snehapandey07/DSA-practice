@@ -12,6 +12,7 @@ for (int right = 0 ; right < nums.size(); right++){
     while(sum >= target){
         minlen = min(minlen, right-left +1);
         sum -= nums[left];
+        left++;
     }
 
 } 
