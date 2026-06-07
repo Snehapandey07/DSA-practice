@@ -15,7 +15,7 @@ struct TreeNode {
 
 class Solution {
 public:
-
+3
     bool mirror(TreeNode* left, TreeNode* right) {
 
         if (left == NULL && right == NULL)
