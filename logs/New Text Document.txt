@@ -1,4 +1,5 @@
 //01.04.26
-leanrned aestriod collision and understand the probkem , dry run the peroblem 
+leanrned aestriod collision and understand the problem , dry run the peroblem 
 
 goal : to get highest paying on campus internship in 3rd year 
+
