@@ -1,7 +1,3 @@
-// Date: 23-02-2026
-// Program: Check array if it is sorted or not using recursion
-// Time Complexity = O(n) and space complexity = O(4)
-
 #include <iostream>
 using namespace std;
 
