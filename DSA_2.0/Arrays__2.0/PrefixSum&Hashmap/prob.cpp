@@ -1,3 +1,4 @@
+//Brute Force approcah 
 #include <bits/stdc++.h>
 using namespace std;
 
