@@ -28,3 +28,5 @@ int main() {
 
     return 0;
 }
+// Optimal approach using Prefix sum and hash map 
+//Date : 11.08.26
