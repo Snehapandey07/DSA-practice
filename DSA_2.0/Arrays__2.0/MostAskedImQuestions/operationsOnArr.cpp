@@ -4,13 +4,14 @@ using namespace std;
 class ArrayOperations {
 public:
 
-    // Array operations will be written here
-
     int length(vector<int>& arr) {
-        // implementation
+       
     }
-
-    // Other operations...
+int show(vector<int>& arr, int sz){
+  for (int i = 0; i<sz ; i++){
+    cout<< "The values are: "<<arr[i];
+  }
+}
 };
 
 int main() {
@@ -23,15 +24,14 @@ int main() {
 
     cout << "Enter values of array: ";
 
-    for (int i = 0; i < sz; i++) {
-        int x;
-        cin >> x;
-        arr.push_back(x);
-    }
+  for(int i =0; i<sz; i++){
+    int x;
+    cin>> x;
+    arr.push_back(x);
+  }
 
-    ArrayOperations op;
-
-    // Call operations here
-
+    ArrayOperations ap;
+    ap.show(arr, sz);
+  
     return 0;
 }
