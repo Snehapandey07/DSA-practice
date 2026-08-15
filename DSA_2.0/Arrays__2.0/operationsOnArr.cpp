@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+uu#include <bits/stdc++.h>
 using namespace std;
 
 class ArrayOperations {
@@ -16,6 +16,10 @@ void show (vector <int>& arr, int sz){
     }
 }
 
+void copy (vector<int>&arr){
+    vector <int> b = arr;
+}
+
 int search(vector<int>& arr, int sz, int target) {
     auto it = find(arr.begin(), arr.end(), target);
 
@@ -31,6 +35,18 @@ void sortarr(vector<int> arr){
     cout<<"Sorted array: ";
     for (int i = 0; i < arr.size(); i++) {
         cout << arr[i] << " ";
+    }
+
+    cout << endl;
+}
+
+void copy(vector<int>& arr) {
+    vector<int> b = arr;
+
+    cout << "Copied array: ";
+
+    for (int i = 0; i < b.size(); i++) {
+        cout << b[i] << " ";
     }
 
     cout << endl;
@@ -68,6 +84,7 @@ int main() {
     cout << "Maximum: " << maximum << endl;
     cout << "Sum: " << total << endl;
     cout << "Count of target: " << c << endl;
+    cout << "Array capacity: "<<arr.capacity()<<endl;
 
     ArrayOperations op;
 
