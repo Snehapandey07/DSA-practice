@@ -1,15 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int sum = 0;
-    vector <int> arr = {9, 2, 15,5,-1,-2,1, 7,18};
-      int smallest = arr[0] ;
+    vector <int> arr = {9, 2, 15, 6, 8, 11, 4,12,14,24,56,98};
     int n = arr.size();
+    int count = 0;
     for(int i = 0; i<n; i++){
-            if (arr[i] < smallest){
-                smallest = arr[i];
+            if (arr[i] % 2 == 0){
+         count ++;
             }
         }
-         cout<<"largest element in the array is :"<< smallest;
+         cout<<"count of even number in an array :"<< count ;
     return 0 ;
 }
