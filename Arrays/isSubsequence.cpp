@@ -12,7 +12,7 @@ bool isSubsequence(string s, string t){
     int i = 0;
     int j = 0;
     while (j<t.size()){
-        if(i<s.size() && s[i] == t[j]){
+        if(i<s.size() && t[j] == s[i] ){
             i++;
         }
         j++;
@@ -24,7 +24,7 @@ bool isSubsequence(string s, string t){
 int main() {
 
     string s = "abc";
-    string t = "ahbgdc";
+    string t = "ahbcccc";
 
     Solution obj;
 
