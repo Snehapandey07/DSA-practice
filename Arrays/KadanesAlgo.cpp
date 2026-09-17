@@ -1,5 +1,6 @@
 /* Date : 25.01.26*/
 /*Kadane's Algo , MaxSum subarray problem*/
+/*Given an array, find a subarray with the maximum sum*/
 
 #include <iostream>
 #include <climits>
@@ -9,7 +10,7 @@ using namespace std;
 int main() {
 
     int n = 6;
-    int arr[6] = {-5, 2, 3, -10, 4, 5+ui};
+    int arr[6] = {-5, 2, 3, -10, 4,5};
 
     int maxSum = INT_MIN;
     int currentSum = 0;
