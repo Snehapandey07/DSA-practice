@@ -9,7 +9,7 @@ using namespace std;
 int main() {
 
     int n = 6;
-    int arr[6] = {-5, 2, 3, -10, 4, 5};
+    int arr[6] = {-5, 2, 3, -10, 4, 5+ui};
 
     int maxSum = INT_MIN;
     int currentSum = 0;
