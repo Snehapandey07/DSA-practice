@@ -1,5 +1,6 @@
 // /* Date : 18/09.2026 */
 // #include<bits/stdc++.h>
+/*Using Hashmap approach*/
 // using namespace std;
 
 // class Solution {
