@@ -1,8 +1,8 @@
 /*Date : 19 May 2026*/
 /*Pattern: Merge Sorted Arrays (Two Pointers)
-
 Key Idea:
 Fill nums1 from the BACK to avoid overwriting. TC: O(m+n), SC : O(1) */
+
 #include <bits/stdc++.h>
 using namespace std;
 
