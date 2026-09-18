@@ -1,41 +1,41 @@
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
+// 
+// class Solution {
+// public:
 
-class Solution {
-public:
+//     int removeElement(vector<int>& nums, int val) {
+//         int k = 0;
+//         for (int i = 0; i < nums.size(); i++) {
 
-    int removeElement(vector<int>& nums, int val) {
-        int k = 0;
-        for (int i = 0; i < nums.size(); i++) {
+//             if (nums[i] != val) {
 
-            if (nums[i] != val) {
+//                 nums[k] = nums[i];
+//                 k++;
+//             }
+//         }
 
-                nums[k] = nums[i];
-                k++;
-            }
-        }
+//         return k;
+//     }
+// };
 
-        return k;
-    }
-};
+// int main() {
 
-int main() {
+//     vector<int> nums = {3,2,2,3};
 
-    vector<int> nums = {3,2,2,3};
+//     int val = 3;
 
-    int val = 3;
+//     Solution s;
 
-    Solution s;
+//     int k = s.removeElement(nums, val);
 
-    int k = s.removeElement(nums, val);
+//     cout << "Number of valid elements: " << k << endl;
 
-    cout << "Number of valid elements: " << k << endl;
+//     cout << "Updated array: ";
 
-    cout << "Updated array: ";
+//     for (int i = 0; i < k; i++) {
+//         cout << nums[i] << " ";
+//     }
 
-    for (int i = 0; i < k; i++) {
-        cout << nums[i] << " ";
-    }
-
-    return 0;
-}
+//     return 0;
+// }

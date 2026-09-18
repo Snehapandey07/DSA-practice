@@ -5,28 +5,49 @@ profit achievable by buying and selling the stock
 at most once. */
 /*The stock should be purchased before selling it, and both actions cannot occur on the same day.*/
 
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+
+// int maxProfit(int prices[], int size) {
+//     int maxProfit = 0;
+//     int bestBuy = prices[0];
+
+//     for (int i = 1; i < size; i++) {
+//         if (prices[i] > bestBuy) {
+//             maxProfit = max(maxProfit, prices[i] - bestBuy);
+//         }
+//         bestBuy = min(bestBuy, prices[i]);
+//     }
+//     return maxProfit;
+// }
+
+// int main() {
+//     int prices[] = {7, 1, 5, 3, 6, 4};
+//     int size = 6;
+
+//     int result = maxProfit(prices, size);
+//     cout << "Maximum Profit = " << result << endl;
+
+//     return 0;
+// }
+/* Date : 18.09.2026*/
+#include <bits/stdc++.h>
 using namespace std;
-
-int maxProfit(int prices[], int size) {
-    int maxProfit = 0;
+int maxProfit(int prices[], int size){
     int bestBuy = prices[0];
-
-    for (int i = 1; i < size; i++) {
-        if (prices[i] > bestBuy) {
-            maxProfit = max(maxProfit, prices[i] - bestBuy);
+    int maxProfit = 0;
+    for (int i = 0; i<size; i++){
+        if(prices[i] > bestBuy ){
+            maxProfit = max (maxProfit, prices[i] - bestBuy);
         }
-        bestBuy = min(bestBuy, prices[i]);
+        bestBuy = min (bestBuy, prices[i]);
     }
     return maxProfit;
 }
-
-int main() {
-    int prices[] = {7, 1, 5, 3, 6, 4};
+int main(){
     int size = 6;
-
-    int result = maxProfit(prices, size);
-    cout << "Maximum Profit = " << result << endl;
-
+    int prices[size] = {1,3,5,2,6,7};
+    cout<< "Maximum Profit: ";
+    cout<< maxProfit(prices, size);
     return 0;
 }
