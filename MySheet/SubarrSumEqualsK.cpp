@@ -8,14 +8,13 @@ public:
     mp[0] = 1;
     int prefixSum = 0;
     int count = 0;
-    for (int x : nums) {
-        prefixSum += x;
+    for (int i : nums) {
+        prefixSum += i;
         if (mp.find(prefixSum - k) != mp.end()) {
             count += mp[prefixSum - k];
         }
         mp[prefixSum]++;
     }
-
     return count;
 }
 };
@@ -27,3 +26,18 @@ int main (){
     cout << "output: "<<s.subarraySum(nums, k);
     return 0;
 }
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// class Solution {
+//     public: 
+//     int subarraySum(vector<int>& nums, int k) {
+//         unordered_map<int> mp;
+//         mp[0] = 1;
+//         int prefixSum = 0; 
+//         int count = 0;
+//         for (int i : nums){
+
+//         }
+//     }
+// }; 
