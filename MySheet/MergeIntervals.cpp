@@ -1,4 +1,8 @@
 /* Date : 19.09.2026 */
+/* intervals[i][0] → start
+   intervals[i][1] → end
+   result.back()[1] = end of the last interval.*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
