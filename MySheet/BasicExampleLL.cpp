@@ -109,3 +109,75 @@ int main() {
 
     return 0;
 }
+
+// /*Practice*/
+// #include <bits/stdc++.h>
+// using namespace std;
+// struct node {
+//     int data;
+//     node*next;
+//     node (int val){
+//         data = val;
+//         next = nullptr;
+//     }
+// };
+
+// void printlist(node*head){
+//     node*temp = head;
+//     while (temp != nullptr){
+//         cout<<temp->data<<" ";
+//         temp = temp ->next;
+//     }
+//     cout << endl;
+// }
+// int main (){
+//     node*first = new node(10);
+//     node*second = new node(20);
+//     node*third = new node (30);
+
+//     first->next = second;
+//     second->next = third;
+//     third-> next = nullptr;
+
+//     node*head = first;
+//     node*tail = second;
+
+//     printlist(head);
+
+//     node*newNode = new node (5);
+//     newNode ->next = head;
+//     head = newNode;
+
+//     cout<<"after inseting: ";
+//     printlist(head);
+
+//     node*t = new node (6);
+//     t->next = tail;
+//     tail = t;
+//     cout<<"inserting at end: ";
+//     printlist(head);
+
+//     int key = 20;
+//     bool found = false;
+//     node*temp = head;
+//     while (temp != nullptr){
+//         if (temp-> data == key){
+//             found = true;
+//             break;
+//         }
+//         temp = temp-> next;
+//     }
+//     if(found){
+//         cout<<"found"<<endl;
+//     }else{
+//         cout<<"not found"<<endl;
+//     }
+
+//     temp = head;
+//     head -> next = head;
+//     delete temp;
+//     cout<<"after deleting 1st node "<<endl;
+//     printlist(head);
+//     return 0; 
+
+// }
