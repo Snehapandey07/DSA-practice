@@ -1,4 +1,4 @@
-/* Date : 20.09.2026*/
+/* Date : 20.09.2026 */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -6,70 +6,106 @@ using namespace std;
 struct Node {
     int data;
     Node* next;
+
+    Node(int val) {
+        data = val;
+        next = nullptr;
+    }
 };
 
+void printList(Node* head) {
+    Node* temp = head;
+
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+}
+
 int main() {
-
-    Node* first = new Node();
-    Node* second = new Node();
-    Node* third = new Node();
-
-    first->data = 10;
-    second->data = 20;
-    third->data = 30;
+    Node* first = new Node(10);
+    Node* second = new Node(20);
+    Node* third = new Node(30);
 
     first->next = second;
     second->next = third;
     third->next = nullptr;
 
     Node* head = first;
-    Node* head = nullptr;
-    Node* tail = nullptr;
+    Node* tail = third;
 
-    /*traverse*/
-    Node* temp = head;
-    while (temp != nullptr) {
-    cout << temp->data << " ";
-    temp = temp->next;
-    }
+    cout << "Initial list: ";
+    printList(head);
 
-    /*Insert at beginning*/
+    // Traverse
+    cout << "After traversal: ";
+    printList(head);
+
+
+    // Insert at beginning
     Node* newNode = new Node(5);
     newNode->next = head;
     head = newNode;
-    
-    /*insert at end*/
-    if (head == nullptr) {
-    head = tail = newNode;
-    } else {
+
+    cout << "After inserting 5 at beginning: ";
+    printList(head);
+
+
+    // Insert at end
+    newNode = new Node(40);
+
     tail->next = newNode;
     tail = newNode;
-    }
 
-    /*Search*/
+    cout << "After inserting 40 at end: ";
+    printList(head);
+
+
+    // Search
     int key = 20;
+    bool found = false;
+
+    Node* temp = head;
+
     while (temp != nullptr) {
-    if (temp->data == key)
-        return true;
-    temp = temp->next;
+        if (temp->data == key) {
+            found = true;
+            break;
+        }
+        temp = temp->next;
     }
 
-    /*delete first node*/
-    Node* temp = head;
+    cout << "Searching for " << key << ": ";
+    if (found)
+        cout << "Found" << endl;
+    else
+        cout << "Not Found" << endl;
+
+
+    // Delete first node
+    temp = head;
     head = head->next;
     delete temp;
-    
-    /*Reverse ll*/
+    cout << "After deleting first node: ";
+    printList(head);
+
+
+    // Reverse linked list
     Node* prev = nullptr;
     Node* curr = head;
     while (curr != nullptr) {
-    Node* next = curr->next;
-    curr->next = prev;
-    prev = curr;
-    curr = next;
+        Node* next = curr->next;
+
+        curr->next = prev;
+
+        prev = curr;
+        curr = next;
     }
     head = prev;
-    return false;
+
+    cout << "After reversing: ";
+    printList(head);
 
     return 0;
 }
