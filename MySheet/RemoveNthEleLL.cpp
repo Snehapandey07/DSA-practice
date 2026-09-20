@@ -40,7 +40,6 @@ void printList(ListNode* head) {
     cout << endl;
 }
 int main() {
-
     // 1 → 2 → 3 → 4 → 5
     ListNode* head = new ListNode(1);
     head->next = new ListNode(2);
@@ -50,9 +49,9 @@ int main() {
     int n = 2;
     cout << "Before: ";
     printList(head);
-    head = removeNthFromEnd(head, n);
+    Solution obj;
+    head = obj.removeNthFromEnd(head, n);
     cout << "After: ";
     printList(head);
-
     return 0;
 }
