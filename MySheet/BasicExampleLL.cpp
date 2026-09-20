@@ -95,12 +95,10 @@ int main() {
     Node* prev = nullptr;
     Node* curr = head;
     while (curr != nullptr) {
-        Node* next = curr->next;
-
-        curr->next = prev;
-
-        prev = curr;
-        curr = next;
+        Node* next = curr->next; //save
+        curr->next = prev;//reverse
+        prev = curr; //move prev
+        curr = next; //move current
     }
     head = prev;
 
@@ -178,6 +176,15 @@ int main() {
 //     delete temp;
 //     cout<<"after deleting 1st node "<<endl;
 //     printlist(head);
+
+//     node*curr = head;
+//     node*prev = nullptr;
+//     while(curr != nullptr){
+//         node*next = curr -> next;
+//         curr -> next = prev;
+//         curr= next;
+//         prev = curr;
+//     }
 //     return 0; 
 
 // }
