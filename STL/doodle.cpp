@@ -186,6 +186,11 @@ int main() {
     int index = lower_bound(v.begin(), v.end(), 2) - v.begin();
     cout << index;
 
+    vector<int> v7 = {10, 20, 30};
+for(auto it = v7.begin(); it != v7.end(); it++) {
+    cout << *it << " ";
+}
+
      strings(s);
      pairs();
      stacks();
