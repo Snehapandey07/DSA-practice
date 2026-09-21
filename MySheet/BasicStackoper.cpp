@@ -28,24 +28,19 @@ public:
             cout << "Stack is empty" << endl;
         else
             cout << "Stack is not empty" << endl;
-  
         cout << "Stack traversal: ";
         printStack(st);
         int target = 30;
-
         if (searchStack(st, target))
             cout << target << " found in stack" << endl;
         else
             cout << target << " not found in stack" << endl;
-
         while (!st.empty()) {
             cout << "Removing: " << st.top() << endl;
             st.pop();
         }
-
         cout << "Stack is now empty." << endl;
     }
-
     void printStack(stack<int> st) {
         while (!st.empty()) {
             cout << st.top() << " ";
@@ -59,7 +54,6 @@ public:
                 return true;
             st.pop();
         }
-
         return false;
     }
 };
