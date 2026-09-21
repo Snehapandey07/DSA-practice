@@ -6,8 +6,7 @@ public:
     void printQueue(queue<int> q) {
         while (!q.empty()) {
             cout << q.front() << " ";
-            q.pop();
-        }
+            q.pop();}
         cout << endl;
     }
     bool searchQueue(queue<int> q, int target) {
@@ -26,22 +25,26 @@ public:
         q.push(50);
         cout << "Queue: ";
         printQueue(q);
+
         cout << "Front: "
              << q.front() << endl;
+
         cout << "Back: "
              << q.back() << endl;
+
         q.pop();
         cout << "After pop: ";
         printQueue(q);
+
         cout << "Queue size: "
              << q.size() << endl;
+             
         if (q.empty())
             cout << "Queue is empty" << endl;
         else
             cout << "Queue is not empty" << endl;
         // SEARCH
         int target = 30;
-
         if (searchQueue(q, target))
             cout << target << " found" << endl;
         else
