@@ -10,9 +10,8 @@ st.push(x);
 st.pop();         
 st.top();         
 st.empty();       
-st.size();        
-
-
+st.size();     
+   
 //read,rempve ele from stack process everything
 while (!st.empty()) {
     int x = st.top();
