@@ -3,16 +3,18 @@
 using namespace std;
 class solution {
 public:
-    void printQueue(queue<int> q) {
-        while (!q.empty()) {
-            cout << q.front() << " ";
-            q.pop();}
-        cout << endl;
-    }
-    bool searchQueue(queue<int> q, int target) {
-        while (!q.empty()) {
-            if (q.front() == target)
+      void printQueue(queue<int>q){
+        while (!q.empty()){
+            cout<<q.front()<<endl;;
+            q.pop();
+        }
+      }
+    bool searchQueue(queue<int>&q, int target){
+        while (!q.empty()){
+            if(q.front() == target){
+                q.front();
                 return true;
+            }
             q.pop();
         }
         return false;
