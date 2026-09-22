@@ -63,25 +63,25 @@
 //     obj.stackOperations(st);
 //     return 0;
 // }
-
 #include <bits/stdc++.h>
 using namespace std;
 class solution {
 public:
-    void printStack(stack<int> st) {
-        while (!st.empty()) {
-            cout << st.top() << " ";
+    void printStack(stack <int> st){
+        while (!st.empty()){
+            cout<< st.top()<<" ";
             st.pop();
         }
-        cout << endl;
+        cout<<endl;
     }
-    bool searchStack(stack<int> st, int target) {
-        while (!st.empty()) {
-            if (st.top() == target)
-                return true;
+    bool searchStack (stack <int>& st, int target){
+        while (!st.empty()){
+            if (st.top() == target){
+                st.top();
+            }
             st.pop();
         }
-        return false;
+        cout<<endl;
     }
     void learnStack(stack<int>& st) {
         st.push(10);
