@@ -1,3 +1,6 @@
+/*Date : 22.09.2026*/
+/* using monotonic decresing stack approach , tc - O(n) */
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
