@@ -1,0 +1,46 @@
+1. SQL fundamentals
+
+CREATE, INSERT, SELECT, UPDATE, DELETE
+WHERE, ORDER BY, GROUP BY, HAVING
+JOIN — INNER, LEFT, RIGHT
+Aggregate functions — COUNT, SUM, AVG, MIN, MAX
+Subqueries
+CTEs (WITH)
+Window functions
+
+2. Database fundamentals
+
+Tables
+Rows & columns
+Primary keys
+Foreign keys
+Constraints
+Relationships
+Normalization
+Indexes
+Transactions
+
+3. PostgreSQL itself
+
+Installing PostgreSQL
+psql command line
+Creating/managing databases
+PostgreSQL data types
+PostgreSQL-specific functions
+SERIAL / IDENTITY
+JSON/JSONB
+Arrays
+Views
+Functions & procedures
+Triggers
+
+4. Advanced PostgreSQL
+
+Index optimization
+EXPLAIN / EXPLAIN ANALYZE
+Transactions & isolation
+CTEs and recursive CTEs
+Full-text search
+PostgreSQL extensions
+Backup/restore
+Roles and permissions

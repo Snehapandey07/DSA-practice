@@ -1,0 +1,86 @@
+SQL Learning Roadmap
+
+1. Database basics
+What is a database?
+Table, row, column
+Primary key
+Foreign key
+Data types
+
+2. Basic SQL — CRUD
+
+CREATE TABLE
+INSERT
+SELECT
+UPDATE
+DELETE
+
+3. Filtering & sorting
+
+WHERE
+AND, OR, NOT
+=, !=, >, <, >=, <=
+ORDER BY
+LIMIT
+
+4. Useful conditions
+
+LIKE
+IN
+BETWEEN
+IS NULL
+DISTINCT
+
+5. Aggregation
+
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+GROUP BY
+HAVING
+
+6. JOINs 
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+Self Join
+
+7. Subqueries
+
+SELECT ...
+WHERE salary > (
+    SELECT AVG(salary) ...
+);
+
+8. Intermediate SQL
+
+CASE
+COALESCE
+String functions
+Date functions
+UNION
+EXISTS
+
+9. Advanced SQL
+
+CTE (WITH)
+Window functions
+ROW_NUMBER()
+RANK()
+DENSE_RANK()
+PARTITION BY
+
+10. Database concepts
+
+Constraints
+Normalization
+Indexes
+Transactions
+ACID
+Views
+Stored procedures
+Triggers
