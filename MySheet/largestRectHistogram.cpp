@@ -23,3 +23,10 @@ public:
         return maxArea;
     }
 };
+// int main (){
+//     Solution s;
+//     vector<int>heights = {30,40,90}; 
+//     int res = s.largestRectangleArea(heights);
+//     cout<<res;
+//     return 0;
+// }

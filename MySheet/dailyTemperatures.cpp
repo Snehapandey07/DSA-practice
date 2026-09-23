@@ -23,7 +23,6 @@ public:
         return ans;
     }
 };
-
 int main() {
     vector<int> temps = {30, 60, 90};
     Solution s;
