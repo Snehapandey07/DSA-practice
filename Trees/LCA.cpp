@@ -1,23 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-class TreeNode {
-    public : 
+struct node {
     int val;
-    TreeNode*left;
-    TreeNode*right;
-
-    TreeNode (int x){
+    node* left;
+    node* right;
+    node(int x) {
         val = x;
         left = NULL;
         right = NULL;
     }
 };
 class Solution {
-  TreeNode*LCA(TreeNode *p, TreeNode *q, TreeNode *q){
-    if (root == nullptr || root == q || root = p){
-        return root;
+public:
+    node* lowestCommonAncestor(node* root, node* p, node* q) {
+        if (root == nullptr || root == p || root == q)
+            return root;
+        node* left = lowestCommonAncestor(root->left, p, q);
+        node* right = lowestCommonAncestor(root->right, p, q);
+
+        if (left != nullptr && right != nullptr)
+            return root;
+
+        if (left != nullptr)
+            return left;
+
+        return right;
     }
-    TreeNode* LCA = LCA()
-  }
 };
