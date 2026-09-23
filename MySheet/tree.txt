@@ -1,0 +1,29 @@
+1. BST Operations⭐
+Search
+Insert
+Delete
+Minimum / Maximum
+Kth smallest
+Validate BST
+
+2. Tree Recursion⭐
+Height
+Diameter
+Balanced tree
+Maximum depth
+Count/sum variations
+
+3. Path Pattern⭐
+Root-to-leaf path
+Path sum
+Maximum path
+All paths
+
+4. Relationship Pattern⭐
+Lowest Common Ancestor (LCA)
+Same tree
+Symmetric/mirror tree
+
+5. Construction⭐
+Preorder + Inorder → Tree
+Postorder + Inorder → Tree
