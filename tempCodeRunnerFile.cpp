@@ -1,30 +1,43 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-
-vector <int> findNGE(int ans[], int sz){
-    vector<int> nge(sz);
-    stack<int>st;
-    for(int i = sz-1; i>=0; i--){
-        while(!st.empty() && st.top()<=ans[i]){
-            st.pop();
-        }
-        if(st.empty()){
-        nge[i] = -1;
-        }else{
-            nge[i] = st.top();
-        }st.push(ans[i]); 
+struct node {
+   int data;
+   node* left;
+   node*right;
+    node(int x){
+    data = x;
+    right = nullptr;
+    left = nullptr;
+   }
+};
+class Solution {
+public:
+int diameter = 0;
+ int height(node* root) {
+        if (root == nullptr)
+            return 0;
+        int left = height(root->left);
+        int right = height(root->right);
+        diameter = max(diameter, left + right);
+        return 1 + max(left, right);
     }
-    return nge;
-} 
+    int diameterOfBinaryTree(node* root) {
+        height(root);
+        return diameter;
+    }
+};
 int main(){
-    int sz = 12;
-    int arr[12] = {4,12,5,3,1,2,5,3,1,2,4,6};
+    node* root = new node(5);
+    root->left = new node(4);
+    root->right = new node(8);
+    root->left->left = new node(11);
+    root->right->left = new node(13);
+    root->right->right = new node(4);
+    root->left->left->left = new node(7);
+    root->left->left->right = new node(2);
 
-    vector<int> result = findNGE(arr, sz);
-
-    cout << "NGE's in the array:\n";
-    for(int x : result){
-        cout << x << " ";
-    }
+    int targetSum = 22;
+    Solution s;
+    cout << s.diameterOfBinaryTree(root);
     return 0;
 }
