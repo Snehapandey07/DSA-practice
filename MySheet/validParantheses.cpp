@@ -1,4 +1,4 @@
-/*mistake to avoid : be careful with vector data type */
+/*mistake to avoid : be careful with stack data type */
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
@@ -32,4 +32,32 @@ int main() {
     Solution sol;
     cout << sol.valid(str) << endl;
     return 0;
+} 
+/*
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+public:
+bool valid (string s){
+stack<char>st;
+
+for(char c: s){
+   s.push_back(c);
+
+if(st.empty()){
+    return false;
 }
+while(c == '(' && st.top() == ')' || c == '[' && st.top() == ']' || c == '{' && st.top() == '}' ){
+   st.pop();
+}
+}
+return st.empty();
+}
+};
+int main() {
+    string str = "{[()]}";
+    Solution sol;
+    cout << sol.valid(str) << endl;
+    return 0;
+}
+    */
