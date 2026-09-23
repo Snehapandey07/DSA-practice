@@ -12,13 +12,14 @@ public:
         for (int i = n - 1; i >= 0; i--) {
             while (!st.empty() && temps[st.top()] <= temps[i]) {
                 st.pop();
+/*remove temps that are smaller or equal to current temp*/
             }
             if (!st.empty()) {
-                ans[i] = st.top() - i;  //don't forget this
+                ans[i] = st.top() - i;  
+/*warmer day idx - cuur_day idx = no. of days to wait*/
             }
             st.push(i);
         }
-
         return ans;
     }
 };
