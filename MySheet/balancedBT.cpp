@@ -13,18 +13,23 @@ struct node {
 };
 class Solution {
 public:
-int diameter = 0;
- int height(node* root) {
+    int height(node* root) {
+
         if (root == nullptr)
             return 0;
+
         int left = height(root->left);
         int right = height(root->right);
-        diameter = max(diameter, left + right);
+        if (abs(left - right) > 1)
+            return -1;
+        if (left == -1 || right == -1)
+            return -1;
+
         return 1 + max(left, right);
     }
-    int diameterOfBinaryTree(node* root) {
-        height(root);
-        return diameter;
+
+    bool isBalanced(node* root) {
+        return height(root) != -1;
     }
 };
 int main(){
@@ -36,9 +41,7 @@ int main(){
     root->right->right = new node(4);
     root->left->left->left = new node(7);
     root->left->left->right = new node(2);
-
-    int targetSum = 22;
     Solution s;
-    cout << s.diameterOfBinaryTree(root);
+    cout << s.isBalanced(root);
     return 0;
 }
