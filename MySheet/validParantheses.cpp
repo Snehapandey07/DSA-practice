@@ -1,13 +1,11 @@
+/*mistake to avoid : be careful with vector data type */
 #include <bits/stdc++.h>
 using namespace std;
-
 class Solution {
 public:
     bool valid(string s) {
         stack<char> st;
-
         for (char c : s) {
-
             if (c == '(' || c == '[' || c == '{') {
                 st.push(c);
             }
@@ -15,7 +13,6 @@ public:
                 if (st.empty()) {
                     return false;
                 }
-
                 if ((c == ')' && st.top() == '(') ||
                     (c == ']' && st.top() == '[') ||
                     (c == '}' && st.top() == '{')) {
