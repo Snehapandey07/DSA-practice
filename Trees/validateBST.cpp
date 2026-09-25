@@ -31,7 +31,7 @@ int main() {
     Solution s;
     if (s.isValidBST(root))
         cout << "Valid BST";
-    else
+    elseu
         cout << "Not a Valid BST";
     return 0;
 }
