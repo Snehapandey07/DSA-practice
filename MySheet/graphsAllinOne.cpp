@@ -290,8 +290,7 @@ public:
 };
 void kruskalMST(
     int V,
-    vector<tuple<int, int, int>> edges
-) {
+    vector<tuple<int, int, int>> edges) {
     sort(edges.begin(), edges.end());
     DSU dsu(V);
     int totalWeight = 0;
@@ -319,8 +318,7 @@ void kruskalMST(
 }
 void topologicalSort(
     int V,
-    vector<vector<int>>& adj
-) {
+    vector<vector<int>>& adj) {
     vector<int> indegree(V, 0);
     for (int u = 0; u < V; u++) {
         for (int v : adj[u])
@@ -337,9 +335,7 @@ void topologicalSort(
         q.pop();
         result.push_back(node);
         for (int neighbor : adj[node]) {
-
             indegree[neighbor]--;
-
             if (indegree[neighbor] == 0)
                 q.push(neighbor);
         }
@@ -356,7 +352,7 @@ void topologicalSort(
 }
 int main() {
     Graph g(5);
-    cout << "\n--- Adding Edges ---\n";
+    cout << "\nAdding Edges\n";
     g.addEdge(0, 1, 2);
     g.addEdge(0, 2, 4);
     g.addEdge(1, 2, 1);
@@ -365,20 +361,19 @@ int main() {
     g.addEdge(3, 4, 2);
     g.displayList();
     g.displayMatrix();
-    cout << "\n--- Basic Operations ---\n";
+    cout << "\nBasic Operations\n";
     g.checkEdge(0, 1);
     g.degree(1);
-    cout << "\n--- Traversals ---\n";
+    cout << "\nTraversals\n";
     g.BFS(0);
     g.DFS(0);
-    cout << "\n--- Graph Analysis ---\n";
+    cout << "\nGraph Analysis\n";
     g.connectedComponents();
     g.detectCycle();
-    // SHORTEST PATHS
-    cout << "\n--- Shortest Paths ---\n";
+    cout << "\nShortest Paths\n";
     g.shortestPathBFS(0, 4);
     g.dijkstra(0);
-    cout << "\n--- Minimum Spanning Trees ---\n";
+    cout << "\nMinimum Spanning Trees\n";
     g.primMST();
     vector<tuple<int, int, int>> edges = {
         {2, 0, 1},
@@ -389,7 +384,7 @@ int main() {
         {2, 3, 4}
     };
     kruskalMST(5, edges);
-    cout << "\n--- Topological Sorting ---\n";
+    cout << "\nTopological Sorting\n";
     // Directed Acyclic Graph
     vector<vector<int>> dag(4);
     dag[0].push_back(1);
@@ -397,7 +392,7 @@ int main() {
     dag[1].push_back(3);
     dag[2].push_back(3);
     topologicalSort(4, dag);
-    cout << "\n--- Removing Edge ---\n";
+    cout << "\nRemoving Edge\n";
     g.removeEdge(0, 1);
     g.displayList();
     return 0;
