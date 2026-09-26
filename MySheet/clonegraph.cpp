@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+/* bfs = tc: O(V+E) , SC: O(V)*/
+/*#include <bits/stdc++.h>
 using namespace std;
 class Node {
 public:
@@ -59,5 +60,54 @@ int main() {
         }
         cout << endl;
     }
+    return 0;
+}*/
+
+/*Date: 26.09.2026*/
+/*Using DFS , same time complexity and space complexiy */
+#include <bits/stdc++.h>
+using namespace std;
+class Node {
+public:
+    int val;
+    vector<Node*> neighbors;
+    Node(int x) {
+        val = x;
+    }
+};
+class Solution {
+public:
+    unordered_map<Node*, Node*> mp;
+    Node* cloneGraph(Node* node) {
+        if (node == nullptr)
+            return nullptr;
+        if (mp.find(node) != mp.end())
+            return mp[node];
+        mp[node] = new Node(node->val);
+        for (Node* neighbor : node->neighbors) {
+            mp[node]->neighbors.push_back(cloneGraph(neighbor));
+        }
+        return mp[node];
+    }
+};
+
+int main() {
+    //    1 ---- 2
+    //    |      |
+    //    |      |
+    //    4 ---- 3
+
+    Node* n1 = new Node(1);
+    Node* n2 = new Node(2);
+    Node* n3 = new Node(3);
+    Node* n4 = new Node(4);
+    n1->neighbors = {n2, n4};
+    n2->neighbors = {n1, n3};
+    n3->neighbors = {n2, n4};
+    n4->neighbors = {n1, n3};
+    Solution s;
+    Node* clone = s.cloneGraph(n1);
+    cout << "Cloned graph starting node: "
+         << clone->val << endl;
     return 0;
 }
