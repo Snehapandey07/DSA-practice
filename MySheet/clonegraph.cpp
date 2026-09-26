@@ -84,6 +84,7 @@ public:
             return nullptr;
         if (mp.find(node) != mp.end())
             return mp[node];
+            
         mp[node] = new Node(node->val);
         for (Node* neighbor : node->neighbors) {
             mp[node]->neighbors.push_back(cloneGraph(neighbor));
@@ -101,6 +102,7 @@ int main() {
     n2->neighbors = {n1, n3};
     n3->neighbors = {n2, n4};
     n4->neighbors = {n1, n3};
+
     Solution s;
     Node* clone = s.cloneGraph(n1);
     cout << "Cloned Graph:" << endl;
