@@ -59,3 +59,26 @@ int main(){
     }
     return 0;
 } */
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int V = 4;
+    vector<pair<int, int>> edges = {
+        {0,1}, {1,0}, {1,2}, {2,3}
+    };
+    vector<vector<int>> adjlist(V);
+    for (auto edge : edges) {
+        int u = edge.first;
+        int v = edge.second;
+        adjlist[u].push_back(v);
+    }
+    cout << "Adjacency List:" << endl;
+    for (int i = 0; i < V; i++) {
+        cout << i << " : ";
+        for (int neighbor : adjlist[i]) {
+            cout << neighbor << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
