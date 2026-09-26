@@ -63,8 +63,9 @@ int main() {
     return 0;
 }*/
 
-/*Date: 26.09.2026*/
-/*Using DFS , same time complexity and space complexiy */
+/* Date: 26.09.2026 */
+/* Using DFS: TC = O(V+E), SC = O(V) */
+
 #include <bits/stdc++.h>
 using namespace std;
 class Node {
@@ -92,11 +93,13 @@ public:
 };
 
 int main() {
-    //    1 ---- 2
-    //    |      |
-    //    |      |
-    //    4 ---- 3
 
+    /*
+          1 ---- 2
+          |      |
+          |      |
+          4 ---- 3
+    */
     Node* n1 = new Node(1);
     Node* n2 = new Node(2);
     Node* n3 = new Node(3);
@@ -107,7 +110,24 @@ int main() {
     n4->neighbors = {n1, n3};
     Solution s;
     Node* clone = s.cloneGraph(n1);
-    cout << "Cloned graph starting node: "
-         << clone->val << endl;
+    cout << "Cloned Graph:" << endl;
+    queue<Node*> q;
+    unordered_set<Node*> visited;
+    q.push(clone);
+    visited.insert(clone);
+
+    while (!q.empty()) {
+        Node* curr = q.front();
+        q.pop();
+        cout << curr->val << " -> ";
+        for (Node* neighbor : curr->neighbors) {
+            cout << neighbor->val << " ";
+            if (visited.find(neighbor) == visited.end()) {
+                visited.insert(neighbor);
+                q.push(neighbor);
+            }
+        }
+        cout << endl;
+    }
     return 0;
 }
