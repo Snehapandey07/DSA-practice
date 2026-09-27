@@ -24,7 +24,6 @@ int main() {
 } 
 */
 /* Recursive Binary Search */
-
 #include <bits/stdc++.h>
 using namespace std;
 int bs(vector<int>& nums, int left, int right, int target) {
