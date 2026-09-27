@@ -16,8 +16,7 @@ public:
         dfs(image, r, c + 1, oldColor, newColor); // right
         dfs(image, r, c - 1, oldColor, newColor); // left
     }
-    vector<vector<int>> floodFill(vector<vector<int>>& image,
-                                   int sr, int sc, int color) {\
+vector<vector<int>> floodFill(vector<vector<int>>& image,int sr, int sc, int color) {\
         int oldColor = image[sr][sc];
         if (oldColor == color)
             return image;
@@ -26,11 +25,7 @@ public:
     }
 };
 int main() {
-    vector<vector<int>> image = {
-        {1, 1, 1},
-        {1, 1, 0},
-        {1, 0, 1}
-    };
+    vector<vector<int>> image = {{1, 1, 1},{1, 1, 0},{1, 0, 1}};
     int sr = 1;
     int sc = 1;
     int color = 2;
