@@ -59,6 +59,7 @@ int main(){
     }
     return 0;
 } */
+/*
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
@@ -79,6 +80,28 @@ int main() {
             cout << neighbor << " ";
         }
         cout << endl;
+    }
+    return 0;
+} */
+
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+  int V = 4;
+    vector<pair<int, int>> edges = {{0, 1}, {0, 2}, {1, 2}, {2, 3}};
+    vector <vector<int>> adjmat(V, vector <int>(V,0));
+    for (auto edge : edges){
+        int u = edge.first;
+        int v = edge.second;
+        adjmat[u][v] = 1;
+        adjmat[v][u] = 1;
+    }
+    cout << "Adjacency matrix: ";
+    for (int i = 0 ; i <V; i++){
+        for (int j = 0; j<V; j++){
+        cout <<adjmat[i][j] << " ";
+        }
+        cout<<endl;
     }
     return 0;
 }
