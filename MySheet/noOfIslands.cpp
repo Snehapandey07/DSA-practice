@@ -32,12 +32,10 @@ public:
     }
 };
 int main() {
-    vector<vector<char>> grid = {
-        {'1','1','0','0'},
-        {'1','0','0','1'},
-        {'0','0','1','1'},
-        {'0','0','0','0'}
-    };
+    vector<vector<char>> grid = {{'1','1','0','0'},
+                                 {'1','0','0','1'},
+                                 {'0','0','1','1'},
+                                 {'0','0','0','0'}};
     Solution s;
     int result = s.numIslands(grid);
     cout << "Number of Islands: " << result << endl;
