@@ -86,8 +86,8 @@ public:
             return mp[node];
             
         mp[node] = new Node(node->val);
-        for (Node* neighbor : node->neighbors) {
-            mp[node]->neighbors.push_back(cloneGraph(neighbor));
+        for (Node* nei : node->neighbors) {
+            mp[node]->neighbors.push_back(cloneGraph(nei));
         }
         return mp[node];
     }
@@ -106,6 +106,7 @@ int main() {
     Solution s;
     Node* clone = s.cloneGraph(n1);
     cout << "Cloned Graph:" << endl;
+    
     queue<Node*> q;
     unordered_set<Node*> visited;
     q.push(clone);
