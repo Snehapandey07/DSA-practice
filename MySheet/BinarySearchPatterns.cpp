@@ -73,3 +73,21 @@ int binarySearchMax(int low, int high) {
     }
     return ans;
 }
+
+/*Pattern 2 - Find occurences / first valid positions */
+int firstOccurrence(vector<int>& arr, int target) {
+    int low = 0, high = arr.size() - 1;
+    int ans = -1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (arr[mid] >= target) {
+            if (arr[mid] == target)
+                ans = mid;
+            high = mid - 1;
+        }
+        else {
+            low = mid + 1;
+        }
+    }
+    return ans;
+}
