@@ -91,3 +91,21 @@ int firstOccurrence(vector<int>& arr, int target) {
     }
     return ans;
 }
+
+/*Patterrn 3-  last occurence*/
+int lastOccurrence(vector<int>& arr, int target) {
+    int low = 0, high = arr.size() - 1;
+    int ans = -1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (arr[mid] <= target) {
+            if (arr[mid] == target)
+                ans = mid;
+            low = mid + 1;
+        }
+        else {
+            high = mid - 1;
+        }
+    }
+    return ans;
+}
