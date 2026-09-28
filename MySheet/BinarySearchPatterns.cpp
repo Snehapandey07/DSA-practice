@@ -109,3 +109,37 @@ int lastOccurrence(vector<int>& arr, int target) {
     }
     return ans;
 }
+/*Pattern 4 - Find boundary using condition*/
+int firstTrue(int low, int high) {
+    while (low < high) {
+        int mid = low + (high - low) / 2;
+        if (condition(mid))
+            high = mid;
+        else
+            low = mid + 1;
+    }
+    return low;
+}
+
+/*Pattern 5 - Search in rotated sorted array */
+int searchRotated(vector<int>& arr, int target) {
+    int low = 0, high = arr.size() - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == target)
+            return mid;
+        if (arr[low] <= arr[mid]) {
+            if (arr[low] <= target && target < arr[mid])
+                high = mid - 1;
+            else
+                low = mid + 1;
+        }
+        else {
+            if (arr[mid] < target && target <= arr[high])
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+    }
+    return -1;
+}
