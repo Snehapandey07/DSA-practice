@@ -66,7 +66,7 @@ public:
             int node = q.front();
             q.pop();
             cout << node << " ";
-            for (int neighbor : adj[node]) {
+            for  (int neighbor : adj[node]) {
                 if (!visited[neighbor]) {
                     visited[neighbor] = true;
                     q.push(neighbor);
