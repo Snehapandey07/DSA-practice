@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//Graph BFS - time: O(V+E), space: O(V)
+//1. Graph BFS - time: O(V+E), space: O(V)
 queue<int> q;
 vector<bool> visited(n, false);
 q.push(0);
@@ -18,7 +18,7 @@ while (!q.empty()) {
     }
 }
 
-//DFS - time: O(V+E), space: O(V)
+//2. DFS - time: O(V+E), space: O(V)
 void dfs(int node, vector<vector<int>>& adj,vector<bool>& visited) {
     visited[node] = true;
     cout << node << " ";
@@ -30,7 +30,7 @@ void dfs(int node, vector<vector<int>>& adj,vector<bool>& visited) {
 }
 /*call dfs*/:  dfs(0, adj, visited);
 
-//Connected Componenst : Run bfs/dfs from every unvisited nodes
+//3. Connected Componenst : Run bfs/dfs from every unvisited nodes
 int components = 0;
 for (int i = 0; i < n; i++) {
     if (!visited[i]) {
@@ -39,7 +39,7 @@ for (int i = 0; i < n; i++) {
     }
 }
 
-/*Topologucal sortingn : Kahn's algo , BFS*/
+/*4. Topologucal sortingn : Kahn's algo , BFS*/
 vector<int> topoSort(int V, vector<vector<int>>& adj) {
     vector<int> indegree(V, 0);
     // 1. Calculate indegree
@@ -69,6 +69,38 @@ vector<int> topoSort(int V, vector<vector<int>>& adj) {
                 q.push(v);
         }
     }
+    return topo;
+}
+//kahn's cycle detection 
+if (topo.size() == V)
+    // no cycle
+else
+    // cycle exists
 
+
+/* 5. Topological sort - DFS */
+void dfs(int u, vector<vector<int>>& adj,
+         vector<int>& vis, stack<int>& st) {
+    vis[u] = 1;
+    for (int v : adj[u]) {
+        if (!vis[v]) {
+            dfs(v, adj, vis, st);
+        }
+    }
+    st.push(u);
+}
+vector<int> topoSort(int V, vector<vector<int>>& adj) {
+    vector<int> vis(V, 0);
+    stack<int> st;
+    for (int i = 0; i < V; i++) {
+        if (!vis[i]) {
+            dfs(i, adj, vis, st);
+        }
+    }
+    vector<int> topo;
+    while (!st.empty()) {
+        topo.push_back(st.top());
+        st.pop();
+    }
     return topo;
 }
