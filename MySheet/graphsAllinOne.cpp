@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//Graph BFS
+//Graph BFS - time: O(V+E), space: O(V)
 queue<int> q;
 vector<bool> visited(n, false);
 q.push(0);
@@ -18,9 +18,8 @@ while (!q.empty()) {
     }
 }
 
-//DFS 
-void dfs(int node, vector<vector<int>>& adj,
-         vector<bool>& visited) {
+//DFS - time: O(V+E), space: O(V)
+void dfs(int node, vector<vector<int>>& adj,vector<bool>& visited) {
     visited[node] = true;
     cout << node << " ";
     for (int next : adj[node]) {
