@@ -38,3 +38,37 @@ for (int i = 0; i < n; i++) {
         dfs(i, adj, visited);
     }
 }
+
+/*Topologucal sortingn : Kahn's algo , BFS*/
+vector<int> topoSort(int V, vector<vector<int>>& adj) {
+    vector<int> indegree(V, 0);
+    // 1. Calculate indegree
+    for (int u = 0; u < V; u++) {
+        for (int v : adj[u]) {
+            indegree[v]++;
+        }
+    }
+    // 2. Put all indegree-0 nodes in queue
+    queue<int> q;
+    for (int i = 0; i < V; i++) {
+        if (indegree[i] == 0)
+            q.push(i);
+    }
+    vector<int> topo;
+    // 3. Process queue
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+        topo.push_back(u);
+
+        // 4. Remove u's outgoing edges
+        for (int v : adj[u]) {
+            indegree[v]--;
+            // 5. If indegree becomes 0
+            if (indegree[v] == 0)
+                q.push(v);
+        }
+    }
+
+    return topo;
+}
