@@ -104,3 +104,41 @@ vector<int> topoSort(int V, vector<vector<int>>& adj) {
     }
     return topo;
 }
+
+/* 6. Union Find/DSU - To keep track of which elements belong to the same group. */
+class DSU {
+public:
+    vector<int> parent;
+    vector<int> rank;
+    // Constructor
+    DSU(int n) {
+        parent.resize(n);
+        rank.resize(n, 0);
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+    }
+    // FIND
+    int find(int x) {
+        if (parent[x] == x)
+            return x;
+        return parent[x] = find(parent[x]);
+    }
+    // UNION
+    void unite(int a, int b) {
+        a = find(a);
+        b = find(b);
+        if (a == b)
+            return;
+        if (rank[a] < rank[b]) {
+            parent[a] = b;
+        }
+        else if (rank[a] > rank[b]) {
+            parent[b] = a;
+        }
+        else {
+            parent[b] = a;
+            rank[a]++;
+        }
+    }
+};
