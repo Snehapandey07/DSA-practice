@@ -27,3 +27,28 @@ int main (){
     return 0;
 }
 */
+#include <bits/stdc++.h>
+using namespace std;
+class solution {
+    public:
+    int subarrSumEqualsK(vector <int> nums, int k){
+        unordered_map <int, int>mp;
+        mp[0] = 1;
+        int count = 0;
+        int prefixSum = 0;
+        for (int i : nums){
+            prefixSum += i;
+            if (mp.find(prefixSum - k) != mp.end()) {
+            count += mp[prefixSum - k];
+        }
+        mp[prefixSum]++;
+    }
+    return count;
+        }
+};
+int main (){
+    int k = 93;
+    solution s;
+    cout << "output: "<<s.subarrSumEqualsK(nums, k);
+    return 0;
+}
