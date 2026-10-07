@@ -45,10 +45,10 @@ int main() {
     return 0;
 }
 
-/*template : Two pointers approach for two different sorted array*/
-int i = 0;
-int j = 0;
-while (i < nums1.size() && j < nums2.size()) {
+/* template : Two pointers approach for two different sorted array
+   int i = 0;
+   int j = 0;
+   while (i < nums1.size() && j < nums2.size()) {
     if (nums1[i] < nums2[j]) {
         i++;
     }
@@ -60,4 +60,4 @@ while (i < nums1.size() && j < nums2.size()) {
         i++;
         j++;
     }
-}
+} */
