@@ -31,6 +31,8 @@ First negative number in every window of size K
 
 Variable Sized Sliding Window : We don't know the answer's length beforehand.
 
+Template:
+
 #include <bits/stdc++.h >
 int left = 0;
 int windowSum = 0;
