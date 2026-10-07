@@ -1,0 +1,30 @@
+Fixed size Sliding window 
+Template:
+
+int left = 0;
+int sum = 0;
+int ans = 0;
+
+for(int right = 0; right < nums.size(); right++) {
+
+    sum += nums[right];
+
+    if(right - left + 1 == k) {
+
+        ans = max(ans, sum);
+
+        sum -= nums[left];
+        left++;
+    }
+}
+
+Recognition Keyword : exactly K
+size K
+length K
+every window of K
+
+Examples:
+Maximum sum of subarray of size K
+Average of every subarray of size K
+Maximum number of 1s in a subarray of length K
+First negative number in every window of size K
