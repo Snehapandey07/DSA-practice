@@ -31,6 +31,36 @@ First negative number in every window of size K
 
 Variable Sized Sliding Window : We don't know the answer's length beforehand.
 
-#include <bits >
+#include <bits/stdc++.h >
 int left = 0;
-int 
+int windowSum = 0;
+for (int right = 0; right < n; right ++){
+    windowSum += arr[right]
+    while (conditiobn is invalid ){
+        windowSum -= arr[left];
+        left ++;
+    }
+    //process current valid window 
+}
+
+Recognition keywprd : Longest /shorted / minimum / At most / Mo more than 
+Famous example : Longest Substring Without Repeating Characters
+
+
+How do we detect duplicates:
+unordwered_set<char>st;
+while(st.count(s[right])) {
+    st.erase(s[left]);
+    left++;
+}
+st.insert(s[right]);
+
+If numbers can be negative, a normal sliding window doesn't work reliably.
+That's where your Prefix Sum + HashMap pattern is often used.
+
+Sliding Window recognition keyword:
+sum count
+frequency 
+number of distinct elements 
+number of zeros 
+number of duplicates
