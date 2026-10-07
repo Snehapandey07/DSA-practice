@@ -1,20 +1,19 @@
 Fixed size Sliding window 
+
 Template:
 
-int left = 0;
-int sum = 0;
-int ans = 0;
-
-for(int right = 0; right < nums.size(); right++) {
-
-    sum += nums[right];
-
-    if(right - left + 1 == k) {
-
-        ans = max(ans, sum);
-
-        sum -= nums[left];
-        left++;
+#include <bits/stdc++.h>
+using namespace std;
+class fixed SW{
+    int left = 0;
+    int windowSum = 0;
+    for (int right = 0; right < n ; right ++){
+        windowSum += arr[right];
+        if (right - left + 1 == k){
+            // process k
+            widowSum -= arr[left];
+            legft ++;
+        }
     }
 }
 
@@ -28,3 +27,10 @@ Maximum sum of subarray of size K
 Average of every subarray of size K
 Maximum number of 1s in a subarray of length K
 First negative number in every window of size K
+
+
+Variable Sized Sliding Window : We don't know the answer's length beforehand.
+
+#include <bits >
+int left = 0;
+int 
