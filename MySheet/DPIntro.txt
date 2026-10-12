@@ -7,7 +7,7 @@ All possible choices, Maximum value within a weight
 
 2. Two main conditions for DP
 
-Overlapping subproblems: The same smaller problem is solved repeatedly.
-
 Optimal substructure: A larger problem's answer can be built from answers
 to smaller subproblems.
+
+Overlapping subproblems: The same smaller problem is solved repeatedly.
