@@ -21,7 +21,7 @@ int main (){
 }
 
 
-/* Fibo using Tabulation */
+/* Fibo using Tabulation , Tc : O(n), Sc: O(n)*/
 #include <bits/stdc++.h>
 using namespace std;
 int main (){
