@@ -1,3 +1,5 @@
+//using 2d dp , tc : m*n , cs : m*n;
+/*
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,6 +15,32 @@ public:
     }
 };
 
+int main (){
+int m = 3;
+int  n = 2; 
+Solution s ;
+cout <<"Number Of Possible Unique Paths :" <<s.uniquePaths(m ,n)<< endl;;
+return 0 ;
+}
+*/
+
+//using space optimization : O (n)
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        vector<int> dp(n, 1);
+
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                dp[j] = dp[j] + dp[j - 1];
+            }
+        }
+
+        return dp[n - 1];
+    }
+};
 int main (){
 int m = 3;
 int  n = 2; 
